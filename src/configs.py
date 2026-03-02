@@ -36,32 +36,6 @@ class Configs:
         )
 
         if response.status_code == 200:
-            data = response.json()  # Parse JSON into Python dict
-            
-            # Access top-level fields
-            # print("Field example:", data["field_name"])
-            # Safely access (prevents KeyError)
-            # print("Safe access:", data.get("field_name"))
-            # Access nested fields
-            # print("Nested value:", data["parent"]["child"])
-            # Access list items
-            # print("First item:", data["items"][0])
-            # print("Item property:", data["items"][0]["name"])
-            return data
+            return response.json()
         else:
-            print("Error:", response.text)
-
-# am-loader-experiment=***REMOVED***;
-#  V cwr_u=***REMOVED***;
-#  V session-id=***REMOVED***;
-# ubid-acbjp=***REMOVED***;
-# lc-acbjp=ja_JP;
-# sso-state-acbjp=***REMOVED***;
-# x-acbjp=***REMOVED***;
-# at-acbjp=***REMOVED***;
-# sess-at-acbjp=***REMOVED***;
-# sst-acbjp=***REMOVED***;
-#  V session-id-time=***REMOVED***;
-# am-token=***REMOVED***;
-#  V  cwr_s=***REMOVED***;
-#  V session-token=***REMOVED***
+            print("error:", response.text)
